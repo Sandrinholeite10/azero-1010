@@ -1,5 +1,5 @@
 ---
-default: --format progress -p chrome
+default: --format progress -p chrome_headless
 html: --format html --out=log/report.html 
 chrome: BROWSER=chrome --format html --out=log/report.html
 firefox: BROWSER=firefox
