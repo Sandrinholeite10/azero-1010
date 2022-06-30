@@ -1,5 +1,9 @@
 pipeline {
-   agent {}
+   agent {
+      docker {
+         image "ruby"
+      }
+   }
    stages {
       stage("build") {
          steps {
