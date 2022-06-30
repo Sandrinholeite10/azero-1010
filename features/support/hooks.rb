@@ -3,6 +3,8 @@ include RSpec::Matchers
 Before do
    @page = Pages.new
    @compnent = Components.new
+   
+   page.current_window.resite_to(1280 ,800)
 end
 
 Before('@auth') do
