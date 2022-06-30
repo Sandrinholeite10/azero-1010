@@ -2,6 +2,7 @@ pipeline {
    agent {
       docker {
          image "ruby"
+         args "--link selenium_server"
       }
    }
    stages {
@@ -12,7 +13,7 @@ pipeline {
       }
      stage("Run Tests") {
         steps {
-          sh "bundle exec cucumber -t @smoker"
+          sh "bundle exec cucumber -p ci -t @smoker"
         }
       }
    }

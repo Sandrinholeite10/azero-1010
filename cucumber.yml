@@ -1,6 +1,9 @@
 ---
 default: --format progress -p chrome_headless
+ci: --format progress -p remote_headless
 html: --format html --out=log/report.html 
 chrome: BROWSER=chrome --format html --out=log/report.html
 firefox: BROWSER=firefox
 chrome_headless: BROWSER=chrome_headless
+remote_headless: BROWSER=remote_headless
+ 
